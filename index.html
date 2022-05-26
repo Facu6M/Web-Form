@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title></title>
+</head>
+<body>
+
+
+<h1 id="title" >Job Employee Survey Form</h1>
+<p id="description">Thank you for taking the time to look for a job in our page</p>
+
+<form id="survey-form">
+	 
+	 <p>Name</p> 
+     <input  class="input" required type="text" id="name" placeholder="Enter your name"> 
+	 
+	
+	 <p>Email</p>   
+	 <input id="email" class="input" required type="email" name="" placeholder="Enter your email">
+	 
+	 
+	 <p>Phone</p> 
+	 <input id="phone" maxlength="10" class="input" required type="number"name="" placeholder="Enter your number">
+
+	 
+	 <p>Which option best describes your current role?</p> 
+    <input type="radio" id="contactChoice1"
+           name="contact" class="radio" value="Student">
+    <label id="name-label" for="contactChoice1">Student</label>
+    <hr>
+    <input type="radio" id="contactChoice2"
+           name="contact" class="radio" value="Full time Job">
+    <label id="email-label"for="contactChoice2">Full time Job</label>
+    <hr>
+    <input type="radio" id="contactChoice3"
+           name="contact" class="radio" value="Looking for work">
+    <label id="number-label" for="contactChoice3">Looking for work</label>
+  
+ 	 <p>Age</p> 
+	 <input id ="number" class="input" required  type="number" name=""  min="18" step="1" max="100" placeholder="Enter your age">
+	 
+    
+
+     <p>What are your skills?</p>
+     <select id="dropdown">
+     <option></option>
+     <option>programming</option>
+     <option>math</option>
+     <option>graphic design</option>
+     <option>video editing</option>
+     	</select>
+     
+<div class="check">
+    <p class="p-check">What studies do you have?</p>
+
+    <input  id="check" type="checkbox" value="check" name>
+    <a class="checkbox">primary titles</a>
+    <hr>
+   <input  id="check" type="checkbox" value="check" name>
+    <a class="checkbox">high school degrees</a>
+     <hr>
+    <input id="check"  type="checkbox" value="check" name>
+    <a class="checkbox">tertiary degree</a>
+     <hr>
+    <input id="check"  type="checkbox" value="check" name>
+    <a class="checkbox">university degrees</a>
+</div>
+
+
+
+     <p class="comments">any comments to improve the page?</p>
+     <textarea>
+     	Enter your suggestions here
+     </textarea>
+
+     <input id="submit" class="input" value="SUBMIT" type="submit" name="sdsd"> 
+
+     
+
+
+</form>
+
+</body>
+</html>
+
+
