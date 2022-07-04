@@ -1,90 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="icon" type="image/jpg" href="https://francescricart.com/wp-content/uploads/2019/04/enunciado-formulario-web.jpg">
-	<title>WEB Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<main>
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: Usuario -->
+			<div class="formulario__grupo" id="grupo__usuario">
+				<label for="usuario" class="formulario__label">Usuario</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
 
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
 
-<h1 id="title" >Job Employee Survey Form</h1>
-<p id="description">Thank you for taking the time to look for a job in our page</p>
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+			</div>
 
-<form id="survey-form">
-	 
-	 <p>Name</p> 
-     <input  class="input" required type="text" id="name" placeholder="Enter your name"> 
-	 
-	
-	 <p>Email</p>   
-	 <input id="email" class="input" required type="email" name="" placeholder="Enter your email">
-	 
-	 
-	 <p>Phone</p> 
-	 <input id="phone" maxlength="10" class="input" required type="number"name="" placeholder="Enter your number">
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Repetir Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			</div>
 
-	 
-	 <p>Which option best describes your current role?</p> 
-    <input type="radio" id="contactChoice1"
-           name="contact" class="radio" value="Student">
-    <label id="name-label" for="contactChoice1">Student</label>
-    <hr>
-    <input type="radio" id="contactChoice2"
-           name="contact" class="radio" value="Full time Job">
-    <label id="email-label"for="contactChoice2">Full time Job</label>
-    <hr>
-    <input type="radio" id="contactChoice3"
-           name="contact" class="radio" value="Looking for work">
-    <label id="number-label" for="contactChoice3">Looking for work</label>
-  
- 	 <p>Age</p> 
-	 <input id ="number" class="input" required  type="number" name=""  min="18" step="1" max="100" placeholder="Enter your age">
-	 
-    
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
 
-     <p>What are your skills?</p>
-     <select id="dropdown">
-     <option></option>
-     <option>programming</option>
-     <option>math</option>
-     <option>graphic design</option>
-     <option>video editing</option>
-     	</select>
-     
-<div class="check">
-    <p class="p-check">What studies do you have?</p>
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+			</div>
 
-    <input  id="check" type="checkbox" value="check" name>
-    <a class="checkbox">primary titles</a>
-    <hr>
-   <input  id="check" type="checkbox" value="check" name>
-    <a class="checkbox">high school degrees</a>
-     <hr>
-    <input id="check"  type="checkbox" value="check" name>
-    <a class="checkbox">tertiary degree</a>
-     <hr>
-    <input id="check"  type="checkbox" value="check" name>
-    <a class="checkbox">university degrees</a>
-</div>
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
 
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
 
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
 
-     <p class="comments">any comments to improve the page?</p>
-     <textarea>
-     	Enter your suggestions here
-     </textarea>
-
-     <input id="submit" class="input" value="SUBMIT" type="submit" name="sdsd"> 
-
-     
-
-
-</form>
-
+	<script src="app.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
