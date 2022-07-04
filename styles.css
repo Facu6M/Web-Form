@@ -5,7 +5,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	background: #E5E5E5;
-	background-image:linear-gradient(20deg, rgba(0, 0, 0, 0.2) 0%, rgb(4, 1, 14) 100%), url("https://cf.bstatic.com/xdata/images/hotel/max1024x768/184305239.jpg?k=2d22fe63ae1f8960e057238c98fb436f7bd9f65854e3a5e918607c5cfa1d0a52&o=&hp=1");
+	background-image: linear-gradient(20deg, rgba(0, 0, 0, 0.2) 0%, rgb(4, 1, 14) 100%),url("https://cf.bstatic.com/xdata/images/hotel/max1024x768/184305239.jpg?k=2d22fe63ae1f8960e057238c98fb436f7bd9f65854e3a5e918607c5cfa1d0a52&o=&hp=1");
 background-repeat: no-repeat;
 background-size: cover;
 }
